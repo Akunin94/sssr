@@ -1,0 +1,149 @@
+.spectre-header {
+    background: rgba(0, 116, 201, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    height: 60px;
+
+    @include bp(xxl) {
+        display: none;
+    }
+
+    &__logo {
+        max-width: 60px;
+        font-size: 0;
+
+        @include bp(sm) {
+            max-width: none;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__phone {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 450;
+        color: #333;
+        text-decoration: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-40%);
+    }
+
+    &__burger {
+        cursor: pointer;
+        margin: -5px;
+        min-width: 34px;
+        min-height: 25px;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='15' viewBox='0 0 24 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1.18421C0 0.530189 0.537258 0 1.2 0H22.8C23.4627 0 24 0.530189 24 1.18421C24 1.83823 23.4627 2.36842 22.8 2.36842H1.2C0.537259 2.36842 0 1.83823 0 1.18421Z' fill='%2321A9E1'/%3E%3Cpath d='M5.6 7.5C5.6 6.84598 6.13726 6.31579 6.8 6.31579H22.8C23.4627 6.31579 24 6.84598 24 7.5C24 8.15402 23.4627 8.68421 22.8 8.68421H6.8C6.13726 8.68421 5.6 8.15402 5.6 7.5Z' fill='%2321A9E1'/%3E%3Cpath d='M12 13.8158C12 13.1618 12.5373 12.6316 13.2 12.6316H22.8C23.4627 12.6316 24 13.1618 24 13.8158C24 14.4698 23.4627 15 22.8 15H13.2C12.5373 15 12 14.4698 12 13.8158Z' fill='%2321A9E1'/%3E%3C/svg%3E%0A") center no-repeat;
+    }
+
+    &__popup {
+        position: fixed;
+        left: 0;
+        top: 0;
+		width: 100%;
+		height: 100%;
+        background: linear-gradient(#D26058, #DD3B39);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: 0.3s;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+		&-scroller {
+			padding: 70px 20px 30px;
+			max-height: 100%;
+			overflow: auto;
+			position: relative;
+		}
+
+        &-close {
+            position: absolute;
+            background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L31 31' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31 1L1 31' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+            width: 32px;
+            height: 32px;
+            right: 8px;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        &-menu {
+            width: 100%;
+            display: flex;
+
+            ul {
+                margin: auto 0;
+                padding: 0;
+                list-style: none;
+                width: 100%;
+
+                li {
+                    display: block;
+                    text-align: center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2px;
+                    }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 19px;
+                        line-height: 1;
+                        padding: 14px 10px;
+                        border-radius: 7px;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.2s;
+
+                        img {
+                            margin-left: 5px;
+                        }
+
+                        &:hover, &.active {
+                            background: #e6ff31;
+                            color: #000;
+                            transition: 0.2s;
+
+                            &.spectre-special {
+                                color: #000;
+                            }
+
+                            img {
+                                filter: brightness(0);
+                            }
+                        }
+
+                        &.spectre-special {
+                            font-weight: bold;
+                            color: #e8ff41;
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

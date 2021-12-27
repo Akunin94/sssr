@@ -1,0 +1,171 @@
+.spectre-advantages {
+    margin: 0 -10px;
+    padding: 35px 10px 110px;
+    background: #353535 url(../images/dist/advantages_bg.png) 50% 50% / cover no-repeat;
+    color: #fff;
+    position: relative;
+
+    p:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    @include bp(md) {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 40px 20px 130px;
+    }
+    @include bp(md1) {
+        margin-left: -35px;
+        margin-right: -35px;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    @include bp(xxxl) {
+        margin-left: -80px;
+        margin-right: -80px;
+        padding: 68px 160px 65px 80px;
+    }
+
+    &__left {
+        margin-bottom: 29px;
+
+        @include bp(md1) {
+            flex: 1 0 1%;
+            padding-right: 80px;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-title {
+            font-size: 22px;
+            line-height: 1.1;
+            margin-bottom: 22px;
+            font-weight: bold;
+
+            @include bp(sm) {
+                font-size: 26px;
+            }
+            @include bp(md1) {
+                font-size: 35px;
+                margin-bottom: 44px;
+            }
+            @include bp(xxxl) {
+                padding-top: 20px;
+            }
+        }
+
+        &-description {
+            font-size: 15px;
+            line-height: 1.1;
+
+            @include bp(md1) {
+                font-size: 18px;
+                line-height: 1.2;
+                margin-bottom: 60px;
+            }
+        }
+
+        &-partners {
+            position: absolute;
+            left: -10px;
+            right: 10px;
+            display: flex;
+            bottom: 50px;
+            align-items: center;
+
+            @include bp(md1) {
+                position: static;
+                margin-left: -40px;
+                justify-content: flex-start;
+                margin-top: auto;
+            }
+        }
+
+        &-partner {
+            margin-left: 20px;
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+
+            @include bp(md1) {
+                flex-basis: auto;
+                margin-left: 40px;
+            }
+
+            img {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        align-items: center;
+
+        @include bp(md1) {
+            flex: 0 0 200px;
+            display: block;
+        }
+
+        &-item {
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            margin: 0 0 0 20px;
+
+            @include bp(md1) {
+                max-width: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            @include bp(xl) {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 32px;
+            line-height: 1;
+            color: #e6ff31;
+            font-weight: bold;
+            margin-bottom: 2px;
+
+            @include bp(sm) {
+                font-size: 40px;
+            }
+            @include bp(md1) {
+                font-size: 55px;
+            }
+            @include bp(xl) {
+                font-size: 70px;
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            line-height: 1;
+
+            @include bp(sm) {
+                font-size: 18px;
+            }
+            @include bp(md1) {
+                font-size: 20px;
+            }
+            @include bp(xl) {
+                font-size: 24px;
+            }
+        }
+    }
+}

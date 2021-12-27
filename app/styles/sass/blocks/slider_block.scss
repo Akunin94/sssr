@@ -1,0 +1,302 @@
+.spectre-slider {
+    margin-bottom: 20px;
+    position: relative;
+
+    @include bp(md1) {
+        margin-bottom: 50px;
+    }
+
+    .slick-track {
+        display: flex;
+
+        & > * {
+            min-height: 100%;
+            height: auto;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        left: 20px;
+        bottom: 36px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 0;
+        outline: none;
+        border: none;
+        padding: 0;
+        z-index: 1;
+        background: #80bf63;
+        transform: rotate(180deg);
+
+        @include bp(md1) {
+            left: auto;
+            right: 630px;
+            bottom: 40px;
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: '';
+            background: url("data:image/svg+xml,%3Csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='14.8548' height='1.98631' rx='0.993153' transform='matrix(0.653676 0.756774 -0.767998 0.640453 1.66064 0.270264)' fill='white'/%3E%3Crect width='14.8548' height='1.98631' rx='0.993154' transform='matrix(0.653676 -0.756774 -0.767998 -0.640453 1.77637 22.973)' fill='white'/%3E%3C/svg%3E%0A") 55% 50% no-repeat;
+        }
+
+        &.slick-next {
+            transform: rotate(0);
+            margin-left: 79px;
+
+            @include bp(md1) {
+                margin-left: 0;
+                margin-right: -79px;
+            }
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    & ~ & .slick-arrow {
+        background: #E6FF31;
+
+        @include bp(md1) {
+            right: auto;
+            left: 541px;
+
+            &.slick-next {
+                margin-left: 79px;
+                margin-right: 0;
+            }
+        }
+
+        &:before {
+            filter: brightness(0);
+        }
+    }
+
+    & ~ & ~ & .slick-arrow {
+        background: #FF3838;
+
+        @include bp(md1) {
+            left: auto;
+            right: 630px;
+
+            &.slick-next {
+                margin-left: 0;
+                margin-right: -79px;
+            }
+        }
+
+        &:before {
+            filter: none;
+        }
+    }
+
+    &__pager {
+        position: absolute;
+        border-radius: 7px 0 7px 0;
+        background: #80bf63;
+        color: #fff;
+        text-align: center;
+        font-size: 45px;
+        line-height: 1;
+        height: 108px;
+        width: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 222px;
+        right: 0;
+        z-index: 1;
+
+        @include bp(sm1) {
+            top: 292px;
+        }
+        @include bp(sm2) {
+            top: 412px;
+        }
+        @include bp(md) {
+            top: 492px;
+        }
+        @include bp(md1) {
+            top: auto;
+            bottom: 0;
+            right: 344px;
+            width: 157px;
+            height: 157px;
+            font-size: 45px;
+            align-items: baseline;
+            padding-top: 40px;
+            border-radius: 7px 7px 0 0;
+        }
+
+        .spectre-slider ~ .spectre-slider & {
+            background: #E6FF31;
+            right: auto;
+            left: 0;
+            color: #333;
+
+            @include bp(md1) {
+                right: auto;
+                left: 344px;
+            }
+        }
+
+        .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
+            background: #FF3838;
+            left: auto;
+            right: 0;
+            color: #fff;
+
+            @include bp(md1) {
+                right: 344px;
+                left: auto;
+            }
+        }
+    }
+
+    &__current {
+        
+        @include bp(md1) {
+            font-size: 70px;
+            line-height: 1;
+        }
+    }
+
+    &__item.slick-slide {
+        display: flex !important;
+        flex-direction: column;
+
+        @include bp(md1) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+
+            .spectre-slider ~ .spectre-slider & {
+                flex-direction: row;
+            }
+
+            .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__image {
+        border-radius: 7px;
+        overflow: hidden;
+        font-size: 0;
+        margin-bottom: -7px;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 330px;
+        position: relative;
+
+        @include bp(sm1) {
+            height: 400px;
+        }
+        @include bp(sm2) {
+            height: 520px;
+        }
+        @include bp(md) {
+            height: 600px;
+        }
+        @include bp(md1) {
+            flex-shrink: 0;
+            width: 441px;
+            height: 546px;
+            margin: 0;
+        }
+    }
+
+    &__text {
+        padding: 20px;
+        background: #fff;
+        border-radius: 7px;
+        flex-grow: 1;
+
+        @include bp(md1) {
+            padding: 40px 80px;
+        }
+
+        .slick-slider & {
+            padding-bottom: 115px;
+
+            @include bp(md1) {
+                padding-bottom: 130px;
+            }
+        }
+    }
+
+    & ~ & &__text {
+
+        @include bp(md1) {
+            padding-right: 40px;
+            padding-left: 100px;
+        }
+    }
+
+    & ~ & ~ & &__text {
+
+        @include bp(md1) {
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+
+        @include bp(md1) {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        @include bp(xxxl) {
+            padding-right: 70px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 26px;
+        line-height: 1;
+        color: #6ca625;
+        font-weight: 700;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+
+        @include bp(md1) {
+            font-size: 35px;
+            margin-bottom: 24px;
+        }
+
+        .spectre-slider ~ .spectre-slider & {
+            color: #ffbc05;
+        }
+
+        .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
+            color: #FF3838;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1;
+        color: #777;
+
+        @include bp(md1) {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    }
+}

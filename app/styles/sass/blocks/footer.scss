@@ -1,0 +1,115 @@
+.spectre-footer {
+    background: #F8F8F8;
+    text-align: center;
+    padding: 40px 30px 30px;
+    color: #777;
+
+    @include bp(md1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 80px;
+    }
+    @include bp(xxl) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @media all and (max-width: 1024px) {
+        padding-bottom: 90px;
+    }
+
+    a {
+        color: #777;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+    }
+
+    &__left {
+        margin-bottom: 23px;
+
+        @include bp(md1) {
+            margin-bottom: 0;
+            flex: 0 0 360px;
+            text-align: left;
+        }
+    }
+
+    &__right {
+
+        @include bp(md1) {
+            flex: 0 0 460px;
+            text-align: right;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        font-size: 0;
+        margin-bottom: 20px;
+
+        @include bp(md1) {
+            margin-bottom: 33px;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &__note {
+        font-size: 10px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+        @include bp(xxl) {
+            font-size: 12px;
+        }
+    }
+
+    &__policy {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__linktop {
+        position: fixed;
+        z-index: 10;
+        right: 15px;
+        bottom: 14px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #e6ff31 url("data:image/svg+xml,%3Csvg width='8' height='23' viewBox='0 0 8 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.35355 0.646404C4.15829 0.451143 3.84171 0.451143 3.64644 0.646404L0.464465 3.82838C0.269202 4.02365 0.269202 4.34023 0.464465 4.53549C0.659727 4.73076 0.976309 4.73076 1.17157 4.53549L4 1.70707L6.82843 4.53549C7.02369 4.73075 7.34027 4.73075 7.53553 4.53549C7.73079 4.34023 7.73079 4.02365 7.53553 3.82838L4.35355 0.646404ZM4.5 22.6666L4.5 0.999958L3.5 0.999958L3.5 22.6666L4.5 22.6666Z' fill='black'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+        z-index: 11;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover {
+            background-position: 50% 30%;
+        }
+
+        @include bp(xl) {
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
