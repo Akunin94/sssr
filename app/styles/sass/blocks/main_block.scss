@@ -2,15 +2,32 @@
     background: #FDF7EB url(../images/dist/header_bg.png) 50% 0 / cover no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
-    min-height: 510px;
-    padding: 20px 40px;
+    min-height: 560px;
+    padding: 100px 10px 0;
     position: relative;
 
-    @include bp(md1) {
+    &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -80px;
+        content: '';
+        height: 140px;
+        background: url(../images/dist/header_white.png) 50% 100% / 100% 100% no-repeat;
+
+        @include bp(sm) {
+            bottom: -40px;
+            background-image: url(../images/dist/header_white1.png);
+        }
+    }
+
+    @include bp(sm) {
         background-image: url(../images/dist/header_bg1.png);
+        background-size: auto;
+    }
+    @include bp(md1) {
         min-height: 700px;
         align-items: flex-start;
         justify-content: flex-start;
@@ -57,59 +74,49 @@
     }
 
     &__wrap {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
 
-        @include bp(md1) {
-            margin-bottom: 41px;
+        @include bp(md) {
+            margin-bottom: 22px;
         }
     }
 
     &__title {
-        margin: 0 0 29px;
-        color: #fff;
-        font-size: 34px;
-        line-height: 1;
-        font-weight: 700;
+        color: #000000;
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 300;
+        font-family: $pf;
+        padding: 6px 10px 6px 8px;
+        background: rgba(255, 255, 255, .8);
+        border-radius: 28px 0;
+        margin: 0;
+        width: 100%;
 
-        @include bp(md1) {
-            width: 489px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(4px);
-            text-align: left;
-            margin: 0;
-            font-size: 60px;
-            padding: 34px 25px 39px;
-        }
-
-        span {
-            @media all and (max-width: 959px) {
-                color: #fff !important;
-            }
+        @include bp(md) {
+            font-size: 50px;
+            line-height: 66px;
+            padding: 7px 10px 13px 15px;
+            width: 533px;
+            border-radius: 50px 0;
         }
     }
 
     &__description {
-        font-size: 14px;
-        line-height: 1;
+        font-size: 12px;
+        line-height: 15px;
         color: #fff;
+        background: rgba(0, 116, 201, 0.8);
+        border-radius: 0 0 18px 18px;
+        padding: 3px 5px 5px 9px;
+        font-weight: 500;
+        width: 273px;
 
-        @include bp(md1) {
-            width: 448px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(4px);
-            text-align: left;
-            font-size: 20px;
-            line-height: 1.2;
-            color: #333;
-            padding: 0 25px 25px;
-        }
-        @include bp(xxl) {
-            padding-bottom: 10px;
-
-            span {
-                position: relative;
-                top: -22px;
-            }
+        @include bp(md) {
+            font-size: 18px;
+            line-height: 22px;
+            width: 460px;
+            padding: 10px;
         }
     }
 
@@ -126,20 +133,20 @@
         }
     }
 
-    &__downbutton {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #fff url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.375 0.875L10 11.2917L0.625 0.875' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
-        cursor: pointer;
-        transition: 0.2s;
+    // &__downbutton {
+    //     width: 50px;
+    //     height: 50px;
+    //     border-radius: 50%;
+    //     background: #fff url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.375 0.875L10 11.2917L0.625 0.875' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+    //     cursor: pointer;
+    //     transition: 0.2s;
 
-        @include bp(md1) {
-            margin-left: 25px;
-        }
+    //     @include bp(md1) {
+    //         margin-left: 25px;
+    //     }
 
-        &:hover {
-            opacity: 0.8;
-        }
-    }
+    //     &:hover {
+    //         opacity: 0.8;
+    //     }
+    // }
 }

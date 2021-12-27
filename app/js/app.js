@@ -30,10 +30,10 @@ jQuery.event.special.mousewheel = {
 $(function(){
 	// BURGER START
 	$(document).on('click', '.spectre-header__burger', function(){
-		$('.spectre-header__popup').addClass('active');
+		$('.spectre-header, .spectre-header__popup').addClass('active');
 	});
 	$(document).on('click', '.spectre-header__popup-close', function(){
-		$('.spectre-header__popup').removeClass('active');
+		$('.spectre-header, .spectre-header__popup').removeClass('active');
 	});
 	// BURGER END
 

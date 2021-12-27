@@ -66,21 +66,16 @@
 	}
 }
 
-@include font('futura-pt', normal, 300, '../fonts/FuturaPT-Light.woff2');
-@include font('futura-pt', italic, 300, '../fonts/FuturaPT-LightObl.woff2');
-@include font('futura-pt', normal, 400, '../fonts/FuturaPT-Book.woff2');
-@include font('futura-pt', italic, 400, '../fonts/FuturaPT-BookObl.woff2');
-@include font('futura-pt', normal, 600, '../fonts/FuturaPT-Medium.woff2');
-@include font('futura-pt', italic, 600, '../fonts/FuturaPT-MediumObl.woff2');
-@include font('futura-pt', normal, bold, '../fonts/FuturaPT-Bold.woff2');
-@include font('futura-pt', italic, bold, '../fonts/FuturaPT-BoldObl.woff2');
-@include font('whitesaas', normal, normal, '../fonts/whitesaas.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+$mont: 'Montserrat', sans-serif;
+$pf: 'Playfair Display', serif;
 
 $accent: orange; // Accent Color
 $fontsize: 16px; // Body Font Size
 $textcolor: #333; // Text Color
 $lineheight: 1.65; // Document Line Height
-$userfont: futura-pt, sans-serif; // User Font Family
+$userfont: $mont; // User Font Family
 
 input, textarea {
 	outline: none;
@@ -211,24 +206,24 @@ input, textarea {
 }
 
 .spectre-btn {
-	background: #e6ff31;
-	color: #000;
+	display: inline-block;
+	vertical-align: top;
+	background: #F83A16;
+	color: #fff;
 	text-align: center;
-	font-size: 16px;
-	line-height: 16px;
-	padding: 11px 15px;
+	font-size: 12px;
+	line-height: 1;
+	padding: 10px;
 	border: none;
-	border-radius: 7px;
+	border-radius: 10px;
 	text-decoration: none;
 	cursor: pointer;
 	transition: 0.2s;
-	font-weight: 600;
+	font-weight: 700;
 	font-family: $userfont;
-	height: 45px;
 	border: 1px solid transparent;
 
 	@include bp(md1) {
-		font-size: 18px;
 	}
 
 	&:hover {
@@ -260,7 +255,19 @@ input, textarea {
 	}
 
 	&--big {
-		font-size: 18px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&--large {
+		min-width: 220px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		box-shadow: 0px 4px 4px 0px #610F00A3;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 
@@ -277,7 +284,7 @@ body {
 	font-family: $userfont;
 	font-size: $fontsize;
 	line-height: $lineheight;
-	background: #F8F8F8;
+	background: #FFFFFF;
 	color: $textcolor;
 	min-width: 320px;
 	position: relative;
