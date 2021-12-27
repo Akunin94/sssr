@@ -1,9 +1,11 @@
 {
-	"name": "spectre",
+	"name": "sssr",
 	"version": "1.0.0",
-	"description": "Spectre",
+	"homepage": "https://akunin94.github.io/sssr/",
+	"description": "SSSR",
 	"main": "index.js",
-	"author": "Spectre",
+	"private": true,
+	"author": "SSSR",
 	"type": "module",
 	"browserslist": [
 		"last 10 versions"
