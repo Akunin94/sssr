@@ -25,7 +25,10 @@
         font-size: 0;
 
         @include bp(md) {
-            max-width: none;
+            max-width: 133px;
+        }
+        @include bp(fhd) {
+            max-width: 187px;
         }
 
         img {
@@ -114,11 +117,23 @@
                         font-weight: 500;
                         padding: 14px 10px;
                         border-radius: 7px;
-                        display: flex;
+                        display: inline-flex;
                         text-align: center;
                         justify-content: center;
                         align-items: center;
                         transition: 0.2s;
+                        min-width: 135px;
+                        margin-bottom: 10px;
+
+                        @include bp(xxl) {
+                            font-size: 16px;
+                            font-weight: normal;
+                        }
+                        @include bp(fhd) {
+                            font-size: 19px;
+                            padding-top: 12px;
+                            padding-bottom: 12px;
+                        }
 
                         span {
                             color: #f83a16;

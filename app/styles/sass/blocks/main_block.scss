@@ -8,6 +8,33 @@
     padding: 100px 10px 0;
     position: relative;
 
+    @include bp(sm) {
+        background-image: url(../images/dist/header_bg1.png);
+        background-size: auto;
+    }
+    @include bp(md1) {
+        min-height: 700px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 100px 100px 40px 55px;
+    }
+    @include bp(xxl) {
+        margin-top: 0;
+        min-height: 632px;
+        padding-top: 250px;
+        padding-left: 25px;
+        background-position: 100% 0;
+        background-image: url(../images/dist/header_bg2.png);
+        background-size: auto auto;
+    }
+    @include bp(hd) {
+        background-image: url(../images/dist/header_bg1.png);
+        min-height: 800px;
+    }
+    @include bp(fhd) {
+        padding-left: 35px;
+    }
+
     &:before {
         position: absolute;
         left: 0;
@@ -23,53 +50,92 @@
         }
     }
 
-    @include bp(sm) {
-        background-image: url(../images/dist/header_bg1.png);
-        background-size: auto;
-    }
-    @include bp(md1) {
-        min-height: 700px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 100px 100px 40px 55px;
-    }
-    @include bp(xxl) {
-        margin-top: 0;
-        min-height: 800px;
-        padding-top: 195px;
-    }
-    @include bp(hd) {
-        background-image: url(../images/dist/header_bg2.jpg);
+    &:after {
+        @include bp(xxl) {
+            position: absolute;
+            content: '';
+            right: 116px;
+            top: 200px;
+            width: 248px;
+            height: 236px;
+            background: url(../images/dist/header_address.svg) 0 0 no-repeat;
+        }
+        @include bp(hd) {
+            width: 345px;
+            height: 328px;
+            background-image: url(../images/dist/header_address1.svg);
+            top: 300px;
+            right: 186px;
+        }
     }
 
     &__phone {
         display: none;
         position: absolute;
-        top: 0;
-        right: 0;
-        padding: 20px 20px 20px 160px;
-        text-decoration: none;
-        color: #fff;
-        font-size: 24px;
-        line-height: 1;
-        font-weight: 600;
-        background: #64c120;
-        border-radius: 0 0 0 60px;
+        top: 12px;
+        right: 160px;
+        padding: 14px 20px 11px 8px;
+        background: #fff;
+        border-radius: 10px;
         overflow: hidden;
-
-        &:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            content: '';
-            width: 140px;
-            background: #3f880b url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.9272 5C21.6225 5.45592 23.1682 6.34928 24.4095 7.59059C25.6508 8.8319 26.5441 10.3776 27.0001 12.0728' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.8916 8.86462C19.9087 9.13818 20.8362 9.67419 21.5809 10.419C22.3257 11.1638 22.8617 12.0912 23.1353 13.1083' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5595 15.6019C12.5968 17.7226 14.3158 19.4338 16.4412 20.4614C16.5967 20.5351 16.7687 20.567 16.9403 20.554C17.1119 20.541 17.2771 20.4836 17.4198 20.3874L20.5492 18.3006C20.6877 18.2083 20.8469 18.152 21.0126 18.1368C21.1782 18.1215 21.3451 18.1479 21.498 18.2134L27.3526 20.7225C27.5515 20.807 27.7175 20.9538 27.8257 21.1409C27.9339 21.328 27.9783 21.5451 27.9524 21.7596C27.7673 23.2076 27.0608 24.5385 25.9652 25.5031C24.8695 26.4678 23.4598 26.9999 22 27C17.4913 27 13.1673 25.2089 9.97919 22.0208C6.79107 18.8327 5 14.5087 5 10C5.00008 8.54022 5.53224 7.13052 6.49685 6.03485C7.46146 4.93918 8.79237 4.23267 10.2404 4.04763C10.4549 4.02167 10.672 4.06612 10.8591 4.1743C11.0461 4.28248 11.193 4.44852 11.2775 4.6474L13.7888 10.5071C13.8537 10.6587 13.8802 10.824 13.8658 10.9883C13.8514 11.1525 13.7967 11.3107 13.7064 11.4487L11.6268 14.6261C11.5322 14.7691 11.4762 14.9341 11.4644 15.1051C11.4526 15.2762 11.4854 15.4473 11.5595 15.6019V15.6019Z' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
-            border-radius: 0 60px 0 0;
-        }
+        box-shadow: 0px 3px 11px 2px #0074C938;
+        text-align: right;
 
         @include bp(xxl) {
             display: block;
+        }
+        @include bp(fhd) {
+            padding: 20px 20px 16px 10px;
+            border-radius: 13px;
+            margin-top: 2px;
+        }
+
+        &-phone {
+            display: block;
+            color: #0074c9;
+            font-size: 15px;
+            line-height: 19px;
+            text-decoration: none;
+            font-weight: 500;
+            padding-left: 25px;
+            background: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_9_53)'%3E%3Cpath d='M9.68439 13.6552C5.37856 13.8008 -2.37837 6.10636 1.22314 1.93451L1.83213 1.40496C2.14039 1.10696 2.5536 0.942325 2.98234 0.946686C3.41107 0.951047 3.82085 1.12405 4.12299 1.42826C4.13932 1.44489 4.15453 1.46258 4.16853 1.48121L5.12173 2.71985C5.41141 3.02637 5.57236 3.43241 5.57138 3.85415C5.57039 4.2759 5.40754 4.68118 5.11644 4.98635L4.50321 5.75738C4.84272 6.58194 5.34172 7.33133 5.97157 7.96255C6.60143 8.59377 7.34974 9.09439 8.17356 9.43568L8.94883 8.81875C9.25797 8.53483 9.66226 8.37702 10.082 8.37643C10.5017 8.37584 10.9065 8.53252 11.2164 8.81557L12.4556 9.76877C12.4741 9.78274 12.4917 9.79777 12.5085 9.81379C12.8141 10.1222 12.9856 10.5388 12.9856 10.973C12.9856 11.4072 12.8141 11.8238 12.5085 12.1322L12.0261 12.6882C11.7201 12.9976 11.3552 13.2425 10.953 13.4086C10.5509 13.5747 10.1195 13.6585 9.68439 13.6552ZM2.96379 2.00495C2.88769 2.00489 2.81232 2.01982 2.74199 2.0489C2.67166 2.07797 2.60775 2.12062 2.55391 2.1744L1.94439 2.70396C-1.04548 6.29859 8.10366 14.9383 11.2508 11.9648L11.7338 11.4083C11.7912 11.3572 11.8379 11.2952 11.8713 11.226C11.9046 11.1568 11.924 11.0816 11.9281 11.0049C11.9323 10.9281 11.9213 10.8513 11.8956 10.7789C11.87 10.7064 11.8303 10.6397 11.7788 10.5827L10.5465 9.63639C10.5276 9.6225 10.5099 9.60709 10.4935 9.59031C10.3831 9.48503 10.2363 9.4263 10.0837 9.4263C9.93105 9.4263 9.78429 9.48503 9.67379 9.59031C9.65973 9.60455 9.64488 9.61799 9.62931 9.63056L8.59244 10.4567C8.52046 10.514 8.4348 10.5515 8.34389 10.5656C8.25298 10.5797 8.15997 10.5699 8.07401 10.5372C7.00649 10.1395 6.03692 9.51699 5.23098 8.71187C4.42504 7.90676 3.80157 6.93782 3.40279 5.87071C3.36749 5.78353 3.35604 5.68852 3.36963 5.59545C3.38322 5.50237 3.42135 5.4146 3.48011 5.34115L4.30304 4.30534C4.31528 4.28965 4.32855 4.27479 4.34275 4.26086C4.45093 4.15176 4.51162 4.00435 4.51162 3.85071C4.51162 3.69708 4.45093 3.54967 4.34275 3.44057C4.32625 3.4241 4.31102 3.4064 4.29721 3.38762L3.35301 2.15693C3.24633 2.06053 3.10758 2.0073 2.96379 2.00759V2.00495ZM12.2273 7.60554C14.8698 3.71594 10.215 -0.934094 6.32965 1.70786C6.27106 1.74698 6.22086 1.7974 6.182 1.85616C6.14313 1.91493 6.11639 1.98085 6.10332 2.05008C6.09026 2.11931 6.09114 2.19045 6.10592 2.25934C6.12069 2.32822 6.14906 2.39347 6.18937 2.45125C6.22968 2.50903 6.28111 2.55819 6.34065 2.59585C6.40019 2.6335 6.46665 2.6589 6.53613 2.67055C6.60562 2.6822 6.67672 2.67986 6.74529 2.66369C6.81386 2.64751 6.87851 2.61781 6.93546 2.57634C9.83425 0.585734 13.3484 4.10358 11.3588 7.00025C11.3165 7.05715 11.286 7.12198 11.2691 7.1909C11.2523 7.25982 11.2495 7.33142 11.2609 7.40144C11.2722 7.47147 11.2976 7.53849 11.3353 7.59854C11.3731 7.65859 11.4226 7.71044 11.4808 7.751C11.539 7.79156 11.6047 7.82002 11.6741 7.83468C11.7436 7.84934 11.8152 7.8499 11.8848 7.83633C11.9545 7.82276 12.0207 7.79534 12.0795 7.75569C12.1383 7.71605 12.1886 7.66499 12.2273 7.60554ZM10.1843 6.61791C10.2836 6.51861 10.3393 6.38394 10.3393 6.24352C10.3393 6.1031 10.2836 5.96843 10.1843 5.86912L9.28086 4.96517V3.59362C9.28086 3.45317 9.22507 3.31847 9.12576 3.21916C9.02645 3.11985 8.89176 3.06406 8.75131 3.06406C8.61086 3.06406 8.47617 3.11985 8.37685 3.21916C8.27754 3.31847 8.22175 3.45317 8.22175 3.59362V5.18229C8.22178 5.32272 8.27759 5.45739 8.37691 5.55668L9.43602 6.6158C9.53533 6.71507 9.67 6.77084 9.81042 6.77084C9.95084 6.77084 10.0855 6.71507 10.1848 6.6158L10.1843 6.61791Z' fill='%230074C9'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_9_53'%3E%3Crect width='12.7094' height='12.7094' fill='white' transform='translate(0.27832 0.945831)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 0 2px no-repeat;
+
+            @include bp(fhd) {
+                font-size: 22px;
+                line-height: 26px;
+                background-size: 18px;
+            }
+        }
+
+        &-schedule {
+            font-size: 10px;
+            line-height: 12px;
+            display: inline-block;
+            padding: 0 0 0 6px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                border-radius: 50%;
+                width: 3px;
+                height: 3px;
+                background: #47be85;
+                content: '';
+
+                @include bp(fhd) {
+                    width: 5px;
+                    height: 5px;
+                    top: 10px;
+                }
+            }
+
+            @include bp(fhd) {
+                font-size: 14px;
+                line-height: 17px;
+                padding-left: 8px;
+            }
         }
     }
 
@@ -100,6 +166,12 @@
             width: 533px;
             border-radius: 50px 0;
         }
+        @include bp(fhd) {
+            font-size: 70px;
+            line-height: 93px;
+            width: 743px;
+            border-radius: 70px 0;
+        }
     }
 
     &__description {
@@ -118,18 +190,29 @@
             width: 460px;
             padding: 10px;
         }
+        @include bp(fhd) {
+            font-size: 28px;
+            line-height: 34px;
+            width: 670px;
+            padding: 10px 5px 10px 15px;
+            letter-spacing: -0.6px;
+        }
     }
 
     &__btn {
         margin-bottom: 65px;
 
         @include bp(md1) {
-            margin: 0 0 65px 25px;
             min-width: 253px;
         }
-
         @include bp(xl) {
             margin-bottom: 81px;
+        }
+        @include bp(xxl) {
+            margin-left: 0;
+        }
+        @include bp(fhd) {
+            min-width: 320px;
         }
     }
 
