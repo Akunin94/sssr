@@ -272,7 +272,7 @@ $slider: '.spectre-slider';
             margin-left: 0;
         }
         @include bp(fhd) {
-            display: none;
+            display: none !important;
         }
 
         &:before {

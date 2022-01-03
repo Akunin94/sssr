@@ -151,6 +151,8 @@ input, textarea {
 			flex: 0 0 calc(100% - 208px);
 			max-width: calc(100% - 208px);
 			margin-left: 208px;
+			position: relative;
+			z-index: 1;
 		}
 		@include bp(fhd) {
 			flex: 0 0 calc(100% - 280px);

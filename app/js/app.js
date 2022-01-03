@@ -501,38 +501,10 @@ $(function(){
 				[[83.189865, 54.935236], [83.190510, 54.936281], [83.191115, 54.937813], [54.940571, 83.201450], [54.943191, 83.179195], [54.945523, 83.206432], [54.945192, 83.198332], [54.942449, 83.184714], [54.939560, 83.189982]],
 				'images/dist/comp9.svg'
 			)
-			// const type10 = setMarkers(
-			// 	map,
-			// 	[[54.938194, 83.193311], [54.938957, 83.194467], [54.938508, 83.190686], [54.940288, 83.187093], [54.940989, 83.186332], [54.938333, 83.186690], [54.942361, 83.179343], [54.939803, 83.178904], [54.939803, 83.178904], [54.941871, 83.191618], [54.942993, 83.180027], [54.941884, 83.222453]],
-			// 	'images/dist/comp10.svg'
-			// )
-			const type11 = setMarkers(
-				map,
-				[[83.192274, 54.934596], [54.937970, 83.181101], [54.945036, 83.190365], [54.940161, 83.185081]],
-				'images/dist/comp11.svg'
-			)
-			const type12 = setMarkers(
-				map,
-				[[83.204844, 54.934277], [83.202920, 54.934689], [54.937309, 83.183821], [54.933692, 83.185303], [54.944492, 83.198898]],
-				'images/dist/comp12.svg'
-			)
-			const type13 = setMarkers(
-				map,
-				[[83.167767, 54.929303], [83.190574, 54.937137], [54.941890, 83.190735]],
-				'images/dist/comp13.svg'
-			)
-			const type14 = setMarkers(
-				map,
-				[[83.190933, 54.936937], [83.187923, 54.940724], [54.934715, 83.189491], [54.936731, 83.190698], [54.937481, 83.197699], [54.939497, 83.194705], [54.939510, 83.189636], [54.940636, 83.187898], [54.941081, 83.185097]],
-				'images/dist/comp14.svg'
-			)
 
 			function removeAllMarkers() {
-				// const groups = [
-				// 	type1, type2, type3, type4, type5, type6, type7, type8, type9, type10, type11, type12, type13, type14
-				// ]
 				const groups = [
-					type1, type2, type3, type4, type5, type6, type7, type8, type9, type11, type12, type13, type14
+					type1, type2, type3, type4, type5, type6, type7, type8, type9
 				]
 
 				groups.forEach(group => group.removeFrom(map))
@@ -582,26 +554,6 @@ $(function(){
 				removeAllMarkers()
 				type9.addTo(map);
 			})
-			// $('.spectre-map__nav-item--type10').click(function () {
-			// 	removeAllMarkers()
-			// 	type10.addTo(map);
-			// })
-			$('.spectre-map__nav-item--type11').click(function () {
-				removeAllMarkers()
-				type11.addTo(map);
-			})
-			$('.spectre-map__nav-item--type12').click(function () {
-				removeAllMarkers()
-				type12.addTo(map);
-			})
-			$('.spectre-map__nav-item--type13').click(function () {
-				removeAllMarkers()
-				type13.addTo(map);
-			})
-			$('.spectre-map__nav-item--type14').click(function () {
-				removeAllMarkers()
-				type14.addTo(map);
-			})
 			$('.spectre-map__nav-item--all').click(function () {
 				removeAllMarkers()
 				mainMarker.addTo(map);
@@ -614,11 +566,6 @@ $(function(){
 				type7.addTo(map);
 				type8.addTo(map);
 				type9.addTo(map);
-				// type10.addTo(map);
-				type11.addTo(map);
-				type12.addTo(map);
-				type13.addTo(map);
-				type14.addTo(map);
 			})
 		});
 	}
