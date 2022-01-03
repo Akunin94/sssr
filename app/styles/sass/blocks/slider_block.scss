@@ -1,9 +1,243 @@
-.spectre-slider {
+$slider: '.spectre-slider';
+
+#{$slider} {
     margin-bottom: 20px;
     position: relative;
 
     @include bp(md1) {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
+    }
+    @include bp(xl) {
+        margin-bottom: 80px;
+    }
+    @include bp(xxl) {
+        margin-bottom: 112px;
+    }
+
+    &:nth-of-type(2), &:nth-of-type(4) {
+        .slick-arrow {
+            @include bp(md1) {
+                right: auto;
+                left: 466px;
+            }
+        }
+        #{$slider}__pager {
+            @include bp(md1) {
+                right: auto;
+                left: 338px;
+            }
+            @include bp(fhd) {
+                right: auto;
+                left: 407px;
+            }
+        }
+        #{$slider}__text {
+            border-radius: 0 33px 33px 0;
+        }
+        #{$slider}__title {
+            @include bp(md1) {
+                left: auto;
+                right: 0;
+                text-align: right;
+                max-width: 380px;
+            }
+        }
+    }
+
+    &:nth-of-type(1) #{$slider}__slider, &:nth-of-type(5) #{$slider}__slider {
+        &:before {
+            position: absolute;
+            left: -70px;
+            top: 150px;
+            width: 139px;
+            height: 139px;
+            background: url(../images/dist/slider_leaf.png) 0 0 / 100% no-repeat;
+            content: '';
+            z-index: 2;
+            pointer-events: none;
+
+            @include bp(sm1) {
+                top: 325px;
+            }
+            @include bp(sm2) {
+                top: 445px;
+            }
+            @include bp(md1) {
+                top: auto;
+                bottom: -100px;
+                left: -80px;
+                width: 281px;
+                height: 281px;
+            }
+        }
+    }
+
+    &:nth-of-type(3) #{$slider}__slider:before {
+        position: absolute;
+        left: -70px;
+        bottom: -66px;
+        width: 139px;
+        height: 139px;
+        background: url(../images/dist/slider_leaf.png) 0 0 / 100% no-repeat;
+        content: '';
+        z-index: 2;
+        pointer-events: none;
+
+        @include bp(sm1) {
+            top: 325px;
+        }
+        @include bp(sm2) {
+            top: 445px;
+        }
+        @include bp(md1) {
+            bottom: -105px;
+            height: 281px;
+            left: auto;
+            right: -90px;
+            top: auto;
+            width: 281px;
+        }
+    }
+
+    &:nth-of-type(1) #{$slider}__slider, &:nth-of-type(5) #{$slider}__slider {
+        &:after {
+            position: absolute;
+            left: -40px;
+            right: -40px;
+            top: 40px;
+            height: 465px;
+            background: url(../images/dist/slider_bg.png) 0 0 no-repeat;
+            content: '';
+            z-index: -1;
+
+            @include bp(md1) {
+                width: 590px;
+                height: 590px;
+                left: auto;
+                top: -60px;
+                background-image: url(../images/dist/slider_bg3.png);
+            }
+            @include bp(xl) {
+                top: -90px;
+            }
+            @include bp(xxl) {
+                right: -100px;
+            }
+            @include bp(fhd) {
+                right: -180px;
+                top: -218px; 
+                width: 846px;
+                height: 820px;
+                background-image: url(../images/dist/slider_bg6.png);
+            }
+        }
+    }
+
+    &:nth-of-type(3) #{$slider}__slider:after {
+        position: absolute;
+        left: -40px;
+        right: -40px;
+        top: -55px;
+        height: 556px;
+        background: url(../images/dist/slider_bg1.png) 0 100% no-repeat;
+        content: '';
+        z-index: -1;
+
+        @include bp(md1) {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            width: 499px;
+            height: 503px;
+            top: -50px;
+            left: auto;
+            right: -40px;
+            background-image: url(../images/dist/slider_bg4.png);
+        }
+        @include bp(xl) {
+            top: -70px;
+        }
+        @include bp(xxl) {
+            right: -100px;
+        }
+        @include bp(fhd) {
+            width: 699px;
+            height: 703px;
+            background-image: url(../images/dist/slider_bg7.png);
+            right: -220px;
+            top: -90px;
+        }
+    }
+
+    &:nth-of-type(5) #{$slider}__slider:after {
+        position: absolute;
+        left: -40px;
+        right: -40px;
+        bottom: -60px;
+        top: auto;
+        height: 465px;
+        background: url(../images/dist/slider_bg.png) 0 100% no-repeat;
+        content: '';
+        z-index: -1;
+
+        @include bp(md1) {
+            width: 590px;
+            height: 590px;
+            left: auto;
+            bottom: -40px;
+            background-image: url(../images/dist/slider_bg5.png);
+        }
+        @include bp(xl) {
+            right: -100px;
+        }
+        @include bp(fhd) {
+            right: -220px;
+            bottom: -85px;
+            width: 827px;
+            height: 700px;
+            background-image: url(../images/dist/slider_bg8.png);
+        }
+    }
+
+    & #{$slider}__text {
+        @include bp(md1) {
+            background-repeat: no-repeat;
+        }
+    }
+
+    &:nth-of-type(1) #{$slider}__text {
+        @include bp(md1) {
+            background-image: url(../images/dist/slider_icon1.png);
+            background-position: right -110px top 50%;
+        }
+    }
+
+    &:nth-of-type(2) #{$slider}__text {
+        @include bp(md1) {
+            background-image: url(../images/dist/slider_icon2.png);
+            background-position: left -70px top 50%;
+        }
+    }
+
+    &:nth-of-type(3) #{$slider}__text {
+        @include bp(md1) {
+            background-image: url(../images/dist/slider_icon3.png);
+            background-position: right -135px top 50%;
+        }
+    }
+
+    &:nth-of-type(4) #{$slider}__text {
+        @include bp(md1) {
+            background-image: url(../images/dist/slider_icon4.png);
+            background-position: left -50px top 50%;
+        }
+    }
+
+    &:nth-of-type(5) #{$slider}__text {
+        @include bp(md1) {
+            background-image: url(../images/dist/slider_icon5.svg);
+            background-position: right -135px top 50%;
+        }
     }
 
     .slick-track {
@@ -17,24 +251,28 @@
 
     .slick-arrow {
         position: absolute;
-        left: 20px;
-        bottom: 36px;
+        left: 50%;
+        bottom: 14px;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 43px;
+        height: 43px;
+        margin-left: -95px;
         cursor: pointer;
         font-size: 0;
         outline: none;
         border: none;
         padding: 0;
         z-index: 1;
-        background: #80bf63;
-        transform: rotate(180deg);
+        background: #fff;
 
         @include bp(md1) {
             left: auto;
-            right: 630px;
-            bottom: 40px;
+            right: 532px;
+            bottom: 45px;
+            margin-left: 0;
+        }
+        @include bp(fhd) {
+            display: none;
         }
 
         &:before {
@@ -44,16 +282,15 @@
             top: 0;
             bottom: 0;
             content: '';
-            background: url("data:image/svg+xml,%3Csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='14.8548' height='1.98631' rx='0.993153' transform='matrix(0.653676 0.756774 -0.767998 0.640453 1.66064 0.270264)' fill='white'/%3E%3Crect width='14.8548' height='1.98631' rx='0.993154' transform='matrix(0.653676 -0.756774 -0.767998 -0.640453 1.77637 22.973)' fill='white'/%3E%3C/svg%3E%0A") 55% 50% no-repeat;
+            background: url("data:image/svg+xml,%3Csvg width='13' height='17' viewBox='0 0 13 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.59839 0.511458C10.3387 -0.0768698 11.4196 0.0424109 12.0137 0.785083C12.6053 1.5269 12.4828 2.60868 11.7401 3.20044L5.08839 8.50004L11.7401 13.7998C12.4828 14.3914 12.6053 15.4732 12.0137 16.2152C11.6738 16.6414 11.1736 16.8631 10.6685 16.8631C10.2924 16.8631 9.91481 16.7406 9.59839 16.4888L1.2597 9.84461C0.850122 9.51822 0.611733 9.02391 0.611733 8.50021C0.611733 7.9765 0.850122 7.48219 1.2597 7.1558L9.59839 0.511458Z' fill='%230074C9'/%3E%3C/svg%3E%0A") 47% 50% no-repeat;
         }
 
         &.slick-next {
-            transform: rotate(0);
-            margin-left: 79px;
+            margin-left: 52px;
+            transform: rotate(180deg);
 
             @include bp(md1) {
-                margin-left: 0;
-                margin-right: -79px;
+                margin-right: -52px;
             }
         }
 
@@ -62,241 +299,200 @@
         }
     }
 
-    & ~ & .slick-arrow {
-        background: #E6FF31;
-
-        @include bp(md1) {
-            right: auto;
-            left: 541px;
-
-            &.slick-next {
-                margin-left: 79px;
-                margin-right: 0;
-            }
-        }
-
-        &:before {
-            filter: brightness(0);
-        }
-    }
-
-    & ~ & ~ & .slick-arrow {
-        background: #FF3838;
-
-        @include bp(md1) {
-            left: auto;
-            right: 630px;
-
-            &.slick-next {
-                margin-left: 0;
-                margin-right: -79px;
-            }
-        }
-
-        &:before {
-            filter: none;
-        }
-    }
-
     &__pager {
         position: absolute;
-        border-radius: 7px 0 7px 0;
-        background: #80bf63;
         color: #fff;
         text-align: center;
-        font-size: 45px;
-        line-height: 1;
-        height: 108px;
-        width: 108px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 222px;
-        right: 0;
+        font-size: 23px;
+        line-height: 28px;
+        font-weight: 600;
+        width: 80px;
+        bottom: 21px;
+        left: calc(50% - 40px);
         z-index: 1;
 
-        @include bp(sm1) {
-            top: 292px;
-        }
-        @include bp(sm2) {
-            top: 412px;
-        }
-        @include bp(md) {
-            top: 492px;
-        }
-        @include bp(md1) {
-            top: auto;
-            bottom: 0;
-            right: 344px;
-            width: 157px;
-            height: 157px;
-            font-size: 45px;
-            align-items: baseline;
-            padding-top: 40px;
-            border-radius: 7px 7px 0 0;
-        }
-
-        .spectre-slider ~ .spectre-slider & {
-            background: #E6FF31;
-            right: auto;
-            left: 0;
-            color: #333;
-
+        &:before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            width: 120px;
+            height: 120px;
+            left: calc(50% - 56px);
+            top: -60px;
+            background: url(../images/dist/slider-pages-bg.png) center no-repeat;
+        
             @include bp(md1) {
-                right: auto;
-                left: 344px;
+                display: none;
             }
         }
-
-        .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
-            background: #FF3838;
-            left: auto;
-            right: 0;
-            color: #fff;
-
-            @include bp(md1) {
-                right: 344px;
-                left: auto;
-            }
-        }
-    }
-
-    &__current {
         
         @include bp(md1) {
-            font-size: 70px;
-            line-height: 1;
+            bottom: 0;
+            width: 110px;
+            height: 110px;
+            left: auto;
+            right: 338px;
+            background: #47be85;
+            border-radius: 50%;
+            font-size: 43px;
+            line-height: 52px;
+            padding-top: 26px;
+        }
+        @include bp(fhd) {
+            right: 407px;
+            width: 155px;
+            height: 155px;
+            font-size: 60px;
+            line-height: 72px;
+            padding-top: 40px;
         }
     }
 
     &__item.slick-slide {
         display: flex !important;
         flex-direction: column;
+        position: relative;
+        z-index: 1;
 
         @include bp(md1) {
             display: flex;
             flex-direction: row-reverse;
             align-items: flex-end;
 
-            .spectre-slider ~ .spectre-slider & {
+            #{$slider} ~ #{$slider} & {
                 flex-direction: row;
             }
 
-            .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
+            #{$slider} ~ #{$slider} ~ #{$slider} & {
+                flex-direction: row-reverse;
+            }
+
+            #{$slider} ~ #{$slider} ~ #{$slider} ~ #{$slider} & {
+                flex-direction: row;
+            }
+
+            #{$slider} ~ #{$slider} ~ #{$slider} ~ #{$slider} ~ #{$slider} & {
                 flex-direction: row-reverse;
             }
         }
     }
 
     &__image {
-        border-radius: 7px;
+        border-radius: 20px;
         overflow: hidden;
         font-size: 0;
-        margin-bottom: -7px;
+        margin: 0 0 -20px;
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 330px;
+        height: 225px;
         position: relative;
+        z-index: 2;
 
         @include bp(sm1) {
-            height: 400px;
+            height: 300px;
         }
         @include bp(sm2) {
-            height: 520px;
+            height: 400px;
         }
         @include bp(md) {
-            height: 600px;
+            height: 500px;
         }
         @include bp(md1) {
             flex-shrink: 0;
-            width: 441px;
-            height: 546px;
+            width: 417px;
+            height: 391px;
             margin: 0;
+        }
+        @include bp(fhd) {
+            width: 560px;
+            height: 525px;
         }
     }
 
     &__text {
-        padding: 20px;
-        background: #fff;
-        border-radius: 7px;
+        padding: 35px 10px 80px;
+        background: #0074c9;
+        border-radius: 0 0 20px 20px;
         flex-grow: 1;
+        text-align: center;
+        position: relative;
 
         @include bp(md1) {
-            padding: 40px 80px;
+            border-radius: 33px 0 0 33px;
+            padding: 26px 20px 70px 50px;
+            text-align: left;
+            margin-bottom: 30px;
+            min-height: 218px;
         }
-
-        .slick-slider & {
-            padding-bottom: 115px;
-
-            @include bp(md1) {
-                padding-bottom: 130px;
-            }
-        }
-    }
-
-    & ~ & &__text {
-
-        @include bp(md1) {
-            padding-right: 40px;
-            padding-left: 100px;
-        }
-    }
-
-    & ~ & ~ & &__text {
-
-        @include bp(md1) {
-            padding-right: 80px;
-            padding-left: 80px;
+        @include bp(fhd) {
+            padding: 35px 40px 90px 70px;
+            margin-bottom: 40px;
         }
     }
 
     &__title {
-        font-size: 26px;
-        line-height: 1;
-        margin-bottom: 10px;
-        font-weight: bold;
-        color: #333;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-align: center;
+        color: #000;
 
         @include bp(md1) {
-            font-size: 35px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 30px;
+            line-height: 35px;
             margin-bottom: 20px;
+            text-align: left;
+            max-width: 400px;
+            font-weight: 500;
         }
-        @include bp(xxxl) {
-            padding-right: 70px;
+        @include bp(xl) {
+            font-size: 35px;
+            line-height: 43px;
+            max-width: 500px;
+        }
+        @include bp(fhd) {
+            font-size: 47px;
+            line-height: 57px;
+            max-width: 610px;
         }
     }
 
     &__subtitle {
-        font-size: 26px;
-        line-height: 1;
-        color: #6ca625;
-        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 600;
         margin-bottom: 14px;
-        text-transform: uppercase;
 
         @include bp(md1) {
-            font-size: 35px;
-            margin-bottom: 24px;
+            font-size: 25px;
+            line-height: 1.2;
+            margin-bottom: 12px;
         }
-
-        .spectre-slider ~ .spectre-slider & {
-            color: #ffbc05;
-        }
-
-        .spectre-slider ~ .spectre-slider ~ .spectre-slider & {
-            color: #FF3838;
+        @include bp(fhd) {
+            font-size: 34px;
+            line-height: 41px;
+            margin-bottom: 16px;
         }
     }
 
     &__description {
-        font-size: 14px;
-        line-height: 1;
-        color: #777;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fff;
 
         @include bp(md1) {
-            font-size: 18px;
-            line-height: 1.2;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        @include bp(fhd) {
+            font-size: 21px;
+            line-height: 26px;
         }
     }
 }

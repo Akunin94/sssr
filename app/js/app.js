@@ -46,7 +46,7 @@ $(function(){
 
 		if ( itemsLength > 1 ) {
 			$slider.on('init', function(slick){
-				$slider.append(`<div class="spectre-slider__pager"><span class="spectre-slider__current">1</span> / <span class="spectre-slider__total">${itemsLength}</span></div>`);
+				$slider.append(`<div class="spectre-slider__pager"><span class="spectre-slider__current">1</span>/<span class="spectre-slider__total">${itemsLength}</span></div>`);
 			});
 			$slider.slick({
 				dots: false,
