@@ -1,2 +1,190 @@
 .spectre-info {
+    margin-left: -14px;
+    margin-right: -14px;
+
+    @include bp(sm1) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .spectre-title {
+        margin: 0 0 40px;
+    }
+
+    &__wrap {
+        padding: 13px 8px 0;
+        border-radius: 20px 20px 80px 80px;
+        background: #0074c9;
+
+        @include bp(sm1) {
+            padding: 20px 20px 0;
+        }
+        @include bp(xl) {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            border-radius: 45px;
+            overflow: hidden;
+        }
+    }
+
+    &__left {
+        padding: 38px 20px 20px 36px;
+    }
+
+    &__grid {
+        @include bp(xl) {
+            display: flex;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 22px;
+        text-align: center;
+
+        @include bp(xl) {
+            font-size: 25px;
+            line-height: 31px;
+            margin-bottom: 27px;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        padding-bottom: 38px;
+        margin-bottom: 31px;
+        position: relative;
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            left: calc(50% - 84px);
+            width: 168px;
+            bottom: 0;
+            content: '';
+            border-top: 1px solid #fff;
+
+            @include bp(xl) {
+                border: none;
+            }
+        }
+
+        @include bp(xl) {
+            flex: 0 0 50%;
+            max-width: 50%;
+            font-size: 21px;
+            line-height: 26px;
+            padding-right: 35px;
+            text-align: left;
+        }
+    }
+
+    &__items {
+        padding: 0 40px 15px;
+        width: 252px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        @include bp(md) {
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include bp(xl) {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: auto;
+            padding: 0 40px 0 50px;
+        }
+
+        &:before {
+            @include bp(xl) {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 20px;
+                bottom: 40px;
+                border-left: 1px solid #fff;
+            }
+        }
+    }
+
+    &__item {
+        padding: 0 0 15px 46px;
+        position: relative;
+        background-position: 0 0;
+        background-size: 33px;
+        background-repeat: no-repeat;
+
+        @include bp(md) {
+            flex: 0 0 210px;
+            max-width: 210px;
+        }
+        @include bp(xl) {
+            background-size: 40px;
+            padding-left: 56px;
+        }
+
+        &--type1 {
+            background-image: url(../images/dist/transport-type1.svg);
+        }
+
+        &--type2 {
+            background-image: url(../images/dist/transport-type2.svg);
+        }
+
+        &--type3 {
+            background-image: url(../images/dist/transport-type3.svg);
+        }
+
+        &-title {
+            font-size: 13px;
+            line-height: 16px;
+            color: #fff;
+            margin-bottom: 7px;
+            font-weight: 500;
+
+            @include bp(xl) {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &-body {
+            font-size: 12px;
+            line-height: 14px;
+            color: #fff;
+
+            @include bp(xl) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    &__image {
+        margin: 0 -8px;
+        font-size: 0;
+
+        @include bp(sm1) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+
+    &__img {
+        &--type1 {
+            display: none;
+        }
+    }
 }
