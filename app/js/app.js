@@ -193,7 +193,7 @@ $(function(){
 
 
 	// MASK START
-	$('input[name=phone]').inputmask("8(999) 999-9999");
+	$('input[name=phone]').inputmask("+7 (999) 999-99-99");
 	// MASK END
 
 
@@ -273,24 +273,13 @@ $(function(){
 
 
 	// FORM SEND START
-	$('.spectre-popup-form__form, .spectre-popup-form1__form, .spectre-form1-block__form, .spectre-prices__right-form').on('submit', function(){
+	$('.spectre-popup-form__form, .spectre-popup-form1__form, .spectre-form1-block__form, .spectre-prices__right-form, .spectre-form-block__right-form').on('submit', function(){
 		let $this = $(this),
 			$success_block = $this.next(),
 			url = $this.attr('action'),
 			formData = $this.serialize();
 
 		formAjax(url, formData, $this, $success_block)
-
-		return false;
-	});
-	$('.spectre-form-block__right-form').on('submit', function(){
-		let $this = $(this),
-			$success_block = $this.closest('.spectre-form-block').find('.spectre-form-block__left-title--success'),
-			$hide_block = $this.closest('.spectre-form-block').find('>*'),
-			url = $this.attr('action'),
-			formData = $this.serialize();
-
-		formAjax(url, formData, $this, $success_block, $hide_block)
 
 		return false;
 	});
@@ -323,7 +312,14 @@ $(function(){
 				$success_block.show();
 			},
 			error: function(data) {
-				console.error(data)
+				//console.error(data)
+				$form.hide();
+
+				if ($hide_block) {
+					$hide_block.hide();
+				}
+
+				$success_block.show();
 			}
 		});
 	}

@@ -216,20 +216,21 @@ input, textarea {
 }
 
 .spectre-input, .spectre-textarea {
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 1;
-	border: 1px solid #333;
-	border-radius: 50px;
-	padding: 12px 10px 13px;
+	border: none;
+	border-radius: 9px;
+	padding: 5px 10px 6px;
 	background: #fff;
-	color: #333;
+	font-weight: 600;
+	color: #0074C9;
 	width: 100%;
 	text-align: center;
 	font-family: $userfont;
-	height: 45px;
+	height: 48px;
 
 	&::-webkit-input-placeholder, &:-ms-input-placeholder, &::placeholder, &::-moz-placeholder {
-		color: #333;
+		color: #0074C9;
 	}
 }
 
@@ -239,9 +240,9 @@ input, textarea {
 	background: #F83A16;
 	color: #fff;
 	text-align: center;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 1;
-	padding: 10px;
+	padding: 11px 10px 12px;
 	border: none;
 	border-radius: 10px;
 	text-decoration: none;
@@ -251,12 +252,10 @@ input, textarea {
 	font-family: $userfont;
 	border: 1px solid transparent;
 
-	@include bp(md1) {
-	}
-
 	&:hover {
-		background: #ff3838;
-		color: #fff;
+		background: none;
+		color: #F83A16;
+		border-color: #F83A16;
 	}
 
 	&--secondary {
