@@ -5,6 +5,12 @@
         margin-left: 0;
         margin-right: 0;
     }
+    @include bp(xxl) {
+        margin-bottom: 80px;
+    }
+    @include bp(fhd) {
+        margin-bottom: 130px;
+    }
 
     .spectre-title {
         margin: 0 0 39px;
