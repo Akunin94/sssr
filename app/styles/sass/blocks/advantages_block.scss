@@ -1,171 +1,226 @@
 .spectre-advantages {
-    margin: 0 -10px;
-    padding: 35px 10px 110px;
-    background: #353535 url(../images/dist/advantages_bg.png) 50% 50% / cover no-repeat;
-    color: #fff;
-    position: relative;
+    margin: 0 -18px;
+    padding-bottom: 93px;
+    background: url(../images/dist/about-us-bg.png) right 0 bottom 225px / 320px no-repeat;
 
-    p:first-child {
-        margin-top: 0;
+    @include bp(sm1) {
+        margin: 0;
+    }
+    @include bp(xxl) {
+        padding-bottom: 88px;
+        background-position: right 0 top 0;
+        background-size: auto calc(100% - 88px);
+    }
+    @include bp(fhd) {
+        margin-right: -220px;
+        padding-right: 220px;
+        padding-bottom: 136px;
+        background-size: auto calc(100% - 136px);
     }
 
-    p:last-child {
-        margin-bottom: 0;
+    .spectre-title {
+        margin: 0 0 33px; 
+
+        @include bp(xxl) {
+            max-width: 640px;
+        }
+        @include bp(fhd) {
+            margin-bottom: 47px;
+            max-width: 1000px;
+        }
     }
 
-    @include bp(md) {
-        margin-left: -20px;
-        margin-right: -20px;
-        padding: 40px 20px 130px;
-    }
-    @include bp(md1) {
-        margin-left: -35px;
-        margin-right: -35px;
-        padding: 40px;
-        display: flex;
-        justify-content: space-between;
-    }
-    @include bp(xxxl) {
-        margin-left: -80px;
-        margin-right: -80px;
-        padding: 68px 160px 65px 80px;
+    &__grid {
+        @include bp(xxl) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
     }
 
-    &__left {
-        margin-bottom: 29px;
+    &__description {
+        margin-bottom: 27px;
 
-        @include bp(md1) {
-            flex: 1 0 1%;
-            padding-right: 80px;
+        @include bp(xxl) {
             margin-bottom: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        &-title {
-            font-size: 22px;
-            line-height: 1.1;
-            margin-bottom: 22px;
-            font-weight: bold;
-
-            @include bp(sm) {
-                font-size: 26px;
-            }
-            @include bp(md1) {
-                font-size: 35px;
-                margin-bottom: 44px;
-            }
-            @include bp(xxxl) {
-                padding-top: 20px;
-            }
-        }
-
-        &-description {
-            font-size: 15px;
-            line-height: 1.1;
-
-            @include bp(md1) {
-                font-size: 18px;
-                line-height: 1.2;
-                margin-bottom: 60px;
-            }
-        }
-
-        &-partners {
-            position: absolute;
-            left: -10px;
-            right: 10px;
-            display: flex;
-            bottom: 50px;
-            align-items: center;
-
-            @include bp(md1) {
-                position: static;
-                margin-left: -40px;
-                justify-content: flex-start;
-                margin-top: auto;
-            }
-        }
-
-        &-partner {
-            margin-left: 20px;
-            flex: 0 0 calc(33.333% - 20px);
-            max-width: calc(33.333% - 20px);
-
-            @include bp(md1) {
-                flex-basis: auto;
-                margin-left: 40px;
-            }
-
-            img {
-                width: auto;
-                height: auto;
-            }
-        }
-    }
-
-    &__right {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -20px;
-        align-items: center;
-
-        @include bp(md1) {
-            flex: 0 0 200px;
-            display: block;
-        }
-
-        &-item {
-            flex: 0 0 calc(33.333% - 20px);
-            max-width: calc(33.333% - 20px);
-            margin: 0 0 0 20px;
-
-            @include bp(md1) {
-                max-width: none;
-
-                &:not(:last-child) {
-                    margin-bottom: 30px;
-                }
-            }
-
-            @include bp(xl) {
-                &:not(:last-child) {
-                    margin-bottom: 40px;
-                }
-            }
-        }
-
-        &-title {
-            font-size: 32px;
-            line-height: 1;
-            color: #e6ff31;
-            font-weight: bold;
-            margin-bottom: 2px;
-
-            @include bp(sm) {
-                font-size: 40px;
-            }
-            @include bp(md1) {
-                font-size: 55px;
-            }
-            @include bp(xl) {
-                font-size: 70px;
-            }
         }
 
         &-text {
             font-size: 15px;
-            line-height: 1;
+            line-height: 1.2;
+            color: #000;
 
-            @include bp(sm) {
-                font-size: 18px;
+            @include bp(xxl) {
+                margin-bottom: 46px;
             }
-            @include bp(md1) {
+            @include bp(fhd) {
+                font-size: 21px;
+                line-height: 26px;
+                margin-bottom: 65px;
+            }
+
+            strong {
+                font-weight: 500;
+            }
+
+            p:first-child {
+                margin-top: 0;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__description &__links {
+        display: none;
+
+        @include bp(xxl) {
+            display: flex;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 54px;
+
+        @include bp(xxl) {
+            margin: 15px 0 0 60px;
+            flex: 0 0 360px;
+            max-width: 360px;
+        }
+        @include bp(fhd) {
+            flex-basis: 520px;
+            max-width: 520px;
+            margin: 20px 0 0 75px;
+        }
+
+        &-item {
+            flex: 0 0 43%;
+            max-width: 43%;
+            text-align: center;
+
+            @include bp(xxl) {
+                flex-basis: 40%;
+                max-width: 40%;
+            }
+
+            &:nth-child(2n) ~ & {
+                margin-top: 62px;
+
+                @include bp(xxl) {
+                    margin-top: 84px;
+                }
+                @include bp(fhd) {
+                    margin-top: 118px;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 30px;
+            line-height: 1.2;
+            padding-bottom: 8px;
+            margin-bottom: 5px;
+            color: #0074c9;
+            font-weight: 600;
+            position: relative;
+
+            @include bp(xxl) {
+                font-size: 40px;
+                line-height: 1.3;
+                margin-bottom: 8px;
+            }
+            @include bp(fhd) {
+                font-size: 57px;
+                line-height: 69px;
+                padding-bottom: 12px;
+                margin-bottom: 14px;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: '';
+                border-bottom: 2px solid #0074C9;
+                border-radius: 5px;
+
+                @include bp(xxl) {
+                    border-width: 3px;
+                }
+                @include bp(fhd) {
+                    border-width: 4px;
+                }
+            }
+        }
+
+        &-body {
+            font-size: 15px;
+            line-height: 1.2;
+            color: #000;
+            margin: 0 -5%;
+
+            @include bp(xxl) {
                 font-size: 20px;
             }
-            @include bp(xl) {
-                font-size: 24px;
+            @include bp(fhd) {
+                font-size: 28px;
+                line-height: 35px;
             }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include bp(xxl) {
+            display: none;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-left: -29px;
+        }
+        @include bp(fhd) {
+            margin-left: -41px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #0074c9;
+
+        @include bp(xxl) {
+            margin: 0 0 20px 29px;
+        }
+        @include bp(fhd) {
+            margin: 0 0 28px 41px;
+            font-size: 23px;
+            line-height: 28px;
+        }
+
+        & + & {
+            margin-top: 24px;
+
+            @include bp(xxl) {
+                margin-top: 0;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
         }
     }
 }
