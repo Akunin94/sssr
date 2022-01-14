@@ -119,6 +119,10 @@ input, textarea {
 			flex-basis: 280px;
 		}
 
+		&.notmain {
+			z-index: auto;
+		}
+
 		.spectre-header__popup-scroller {
 			scrollbar-color: #00000090 #ffffff60;
 			scrollbar-width: thin;
@@ -274,15 +278,15 @@ input, textarea {
 	}
 
 	&--secondary {
-		background: #ff3838;
+		background: #0074C9;
 		font-size: 18px;
-		border: 1px solid #ff3838;
+		border: 1px solid #0074C9;
 		color: #fff;
 
 		&:hover {
-			border-color: #ff3838;
+			border-color: #0074C9;
 			background: none;
-			color: #ff3838;
+			color: #0074C9;
 		}
 	}
 

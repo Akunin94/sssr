@@ -250,11 +250,12 @@ $(function(){
 	function hideForm1() {
 		$("body").removeClass("spectre-overflowhidden");
 		$(".spectre-popup-form1").removeClass("active");
+		$(".spectre-wrap__left").removeClass("notmain");
 	}
 	function showForm1($item) {
 		const $image = $item.find('.spectre-tabs__blocks-image').html() || '';
 		const $name = $item.data('size') || '';
-		const $square = $item.find('.spectre-tabs__blocks-square').text() || '';
+		const $square = $item.find('.spectre-tabs__blocks-square').html() || '';
 		const $type = $item.data('type') || '';
 		const $material = $item.data('material') || '';
 
@@ -267,6 +268,7 @@ $(function(){
 		$('.spectre-popup-form1__option--material .spectre-popup-form1__option-value').html($material);
 
 		$(".spectre-popup-form1").addClass("active");
+		$(".spectre-wrap__left").addClass("notmain");
 	}
 	// POPUP FORM END
 
@@ -367,6 +369,16 @@ $(function(){
 
 
 	// TABS START
+	$('.spectre-tabs__blocks-block').each(function(){
+		let $block = $(this),
+			count = $block.find('.spectre-tabs__blocks-item').length,
+			$button = $block.find('.spectre-tabs__blocks-button');
+
+		if (count <= 9) {
+			$button.hide();
+		}
+	});
+
 	$(document).on('click', '.spectre-tabs__nav-item:not(.active)', function(){
 		let $this = $(this),
 			index = $this.index(),
@@ -389,7 +401,6 @@ $(function(){
 			$button.removeClass('active');
 			$allItems.removeAttr('style');
 		} else {
-
 			if ($items.length) {
 				$items.each(function(index){
 					var $this = $(this);
@@ -410,20 +421,7 @@ $(function(){
 				$allItems.css('display', 'flex');
 			}
 		}
-
-		// if ($this.hasClass('active')) {
-		// 	$this.text('Скрыть');
-		// 	$items.css('display', 'flex');
-		// } else {
-		// 	$this.text('Показать еще');
-		// 	$items.removeAttr('style');
-		// }
 	});
-	/*$('.spectre-tabs__blocks-image').each(function(){
-		 lightGallery($(this).get(0), {
-			counter: false
-		});
-	});*/
 	// TABS END
 
 
