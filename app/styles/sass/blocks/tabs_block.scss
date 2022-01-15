@@ -184,8 +184,8 @@
                 margin-left: 0;
             }
             @include bp(fhd) {
-                flex: 0 0 calc(33.333% - 110px);
-                max-width: calc(33.333% - 110px);
+                flex: 0 0 calc(33.333% - 90px);
+                max-width: calc(33.333% - 90px);
                 padding: 46px 17px 22px;
             }
 

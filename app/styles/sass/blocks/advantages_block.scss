@@ -10,6 +10,8 @@
         padding-bottom: 88px;
         background-position: right 0 top 0;
         background-size: auto calc(100% - 88px);
+        margin-right: -100px;
+        padding-right: 120px;
     }
     @include bp(fhd) {
         margin-right: -220px;

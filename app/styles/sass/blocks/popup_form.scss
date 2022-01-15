@@ -11,6 +11,7 @@
 	visibility: hidden;
 	transition: 0.25s;
 	background: #00000070;
+
 	&.active {
 		opacity: 1;
 		visibility: visible;
@@ -92,14 +93,20 @@
 		&-field {
 			margin-bottom: 20px;
 		}
+
+		&-input {
+			border: 1px solid #0074c9;
+		}
+
 		&-button {
 			width: 100%;
 		}
+
 		&-note {
 			text-align: center;
 			font-size: 12px;
 			line-height: 1;
-			color: #777;
+			color: #000;
 		}
 	}
 }
