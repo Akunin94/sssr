@@ -1,5 +1,78 @@
 .spectre-video {
-    
+    margin: 0 -40px;
+    background: #1664A1;
+    padding: 56px 15px 102px;
+    text-align: center;
+    color: #fff;
+
+    @include bp(xxl) {
+        padding: 48px 40px;
+        margin-bottom: 77px;
+    }
+    @include bp(fhd) {
+        margin-bottom: 69px;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 600;
+        margin-bottom: 38px;
+
+        @include bp(xxl) {
+            font-size: 40px;
+            line-height: 49px;
+            margin-bottom: 11px;
+        }
+        @include bp(fhd) {
+            font-size: 54px;
+            line-height: 66px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        width: 95px;
+        height: 93px;
+        background: url(../images/dist/video-play.svg) 0 0 / 100% no-repeat;
+        transition: 0.2s;
+        margin-bottom: 18px;
+
+        @include bp(xxl) {
+            width: 68px;
+            height: 68px;
+            margin-bottom: 15px;
+        }
+        @include bp(fhd) {
+            width: 95px;
+            height: 93px;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__description {
+        font-size: 22px;
+        line-height: 27px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include bp(xxl) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__note {
+        font-size: 22px;
+        line-height: 29px;
+        font-family: $pf;
+        opacity: 0.6;
+    }
 
     &__popup {
         position: fixed;
