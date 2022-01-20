@@ -58,7 +58,7 @@
             top: 200px;
             width: 248px;
             height: 236px;
-            background: url(../images/dist/header_address.svg) 0 0 no-repeat;
+            background: url(../images/dist/header_address.svg) 0 0 / 100% no-repeat;
         }
         @include bp(hd) {
             width: 345px;

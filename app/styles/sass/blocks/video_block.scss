@@ -1,6 +1,6 @@
 .spectre-video {
     margin: 0 -40px;
-    background: #1664A1;
+    background: #1664A1 url(../images/dist/video-block_bg.png) 100% 100% / cover no-repeat;
     padding: 56px 15px 102px;
     text-align: center;
     color: #fff;
@@ -10,6 +10,7 @@
         margin-bottom: 77px;
         margin-left: -30px;
         margin-right: 0;
+        background-image: url(../images/dist/video-block_bg1.png);
     }
     @include bp(fhd) {
         margin-bottom: 69px;

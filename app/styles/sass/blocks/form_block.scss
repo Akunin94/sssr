@@ -23,7 +23,7 @@
     }
 
     &__wrap {
-        background: #147FCD;
+        background: #147FCD url(../images/dist/ipoteka_bg.png) left 100% top calc(100% + 1px) / cover no-repeat;
         padding: 39px 20px 64px;
 
         @include bp(xxl) {
@@ -31,6 +31,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 49px 60px 70px;
+            background-image: url(../images/dist/ipoteka_bg1.png);
         }
         @include bp(xxxl) {
             padding: 49px 100px 70px 90px;
