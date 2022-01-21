@@ -52,7 +52,7 @@
         align-items: center;
         flex-wrap: wrap;
         margin: 0 0 -8px -8px;
-        padding-bottom: 10px;
+        padding-bottom: 17px;
 
         @include bp(md) {
             align-items: flex-start;
@@ -85,6 +85,11 @@
                 padding-left: 22px;
                 padding-right: 22px;
             }
+            @include bp(fhd) {
+                font-size: 16px;
+                border-radius: 16px;
+                padding: 14px 30px;
+            }
 
             &.active, &:hover {
                 color: #fff;
@@ -94,8 +99,8 @@
             &--all {
                 flex: 0 0 55%;
                 max-width: 55%;
-                margin-left: 20%;
-                margin-right: 20%;
+                margin-left: 22.5%;
+                margin-right: 22.5%;
 
                 @include bp(md) {
                     flex-basis: auto;
@@ -128,10 +133,11 @@
                 margin-left: -40px;
             }
             @include bp(xxl) {
-                margin-left: -60px;
+                margin-left: -100px;
             }
             @include bp(fhd) {
-                margin-left: -90px;
+                padding-top: 80px;
+                margin-left: -150px;
             }
         }
 
@@ -181,15 +187,15 @@
                 margin-left: 40px;
             }
             @include bp(xxl) {
-                flex: 0 0 calc(33.333% - 60px);
-                max-width: calc(33.333% - 60px);
-                margin-left: 60px;
+                flex: 0 0 calc(33.333% - 100px);
+                max-width: calc(33.333% - 100px);
+                margin-left: 100px;
             }
             @include bp(fhd) {
-                flex: 0 0 calc(33.333% - 90px);
-                max-width: calc(33.333% - 90px);
+                flex: 0 0 calc(33.333% - 150px);
+                max-width: calc(33.333% - 150px);
                 padding: 46px 17px 22px;
-                margin-left: 90px;
+                margin-left: 150px;
             }
 
             &:hover {
@@ -214,7 +220,7 @@
             cursor: pointer;
             background: #fff;
             font-size: 0;
-            height: 340px;
+            height: 290px;
             width: 100%;
             text-align: center;
 
@@ -224,7 +230,7 @@
         }
 
         &-img {
-            height: 340px;
+            height: 290px;
             max-width: 100%;
             object-fit: contain;
         }
@@ -280,9 +286,10 @@
         &-btn {
             font-size: 12px;
             line-height: 14px;
-            padding: 8px 17px;
+            padding: 8px 26px;
             border-radius: 15px;
             text-transform: uppercase;
+            box-shadow: 0px 3px 10px 2px #0074C938;
 
             @include bp(fhd) {
                 padding: 13px 24px;

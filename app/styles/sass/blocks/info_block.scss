@@ -14,11 +14,19 @@
 
     .spectre-title {
         margin: 0 0 40px;
+
+        @include bp(xxl) {
+            max-width: 460px;
+        }
+        @include bp(fhd) {
+            max-width: 600px;
+        }
     }
 
     &__wrap {
         padding: 13px 8px 0;
-        border-radius: 20px 20px 80px 80px;
+        border-radius: 20px;
+        overflow: hidden;
         background: #0074c9;
 
         @include bp(sm1) {
@@ -100,8 +108,8 @@
         @include bp(xl) {
             flex: 0 0 52%;
             max-width: 52%;
-            font-size: 20px;
-            line-height: 23px;
+            font-size: 16px;
+            line-height: 20px;
             padding-right: 30px;
             text-align: left;
         }

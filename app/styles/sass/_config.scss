@@ -253,7 +253,7 @@ input, textarea {
 	background: #F83A16;
 	color: #fff;
 	text-align: center;
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 1;
 	padding: 11px 10px 12px;
 	border: none;
@@ -271,6 +271,9 @@ input, textarea {
 		border-color: #F83A16;
 	}
 
+	@include bp(xxl) {
+		font-size: 18px;
+	}
 	@include bp(fhd) {
 		font-size: 21px;
 		padding-top: 17px;
@@ -357,7 +360,7 @@ img {
 }
 
 .spectre-main {
-	padding: 35px 40px 0;
+	padding: 25px 40px 0;
 	position: relative;
 
 	@include bp(xxxl) {
@@ -398,7 +401,7 @@ img {
 
 		@include bp(md1) {
 			bottom: auto;
-			top: 44px;
+			top: calc(50% - 12px);
 			border-width: 3px;
 			left: 100%;
 			width: calc(100vw - 200px);

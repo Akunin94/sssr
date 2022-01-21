@@ -1,5 +1,5 @@
 .spectre-calc {
-    margin: 0 -15px 240px;
+    margin: 0 -15px 220px;
 
     @include bp(sm1) {
         margin-left: 0;
@@ -14,13 +14,27 @@
     }
 
     .spectre-title {
-        margin: 0 0 35px; 
+        margin: 0 -10px 35px; 
 
+        @include bp(md1) {
+            margin-left: 0;
+            margin-right: 0;
+        }
         @include bp(xxl) {
             margin-bottom: 40px;
+            max-width: 590px;
         }
         @include bp(fhd) {
             margin-bottom: 55px;
+            max-width: 890px;
+        }
+
+        br {
+            display: none;
+
+            @include bp(md1) {
+                display: block;
+            }
         }
     }
 
@@ -286,6 +300,11 @@
             font-size: 16px;
             height: 52px;
         }
+        @include bp(fhd) {
+            font-size: 21px;
+            height: 70px;
+            border-radius: 25px;
+        }
     }
 
     .spectre-btn {
@@ -302,6 +321,11 @@
         @include bp(xxl) {
             height: 56px;
             font-size: 15px;
+        }
+        @include bp(fhd) {
+            font-size: 21px;
+            height: 76px;
+            border-radius: 25px;
         }
     }
 

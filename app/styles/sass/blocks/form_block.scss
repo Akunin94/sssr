@@ -30,7 +30,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 49px 60px 70px;
+            padding: 49px 60px 70px 72px;
             background-image: url(../images/dist/ipoteka_bg1.png);
         }
         @include bp(xxxl) {
@@ -120,6 +120,7 @@
             margin-bottom: 0;
             text-align: left;
             justify-content: flex-start;
+            margin-left: -6px;
         }
     }
 
@@ -197,6 +198,7 @@
                 @include bp(xxl) {
                     font-size: 20px;
                     line-height: 24px;
+                    margin-bottom: 29px;
                 }
                 @include bp(fhd) {
                     font-size: 28px;
@@ -223,6 +225,26 @@
                 font-weight: normal;
                 font-size: 50%;
                 line-height: 1.3;
+            }
+
+            .spectre-input {
+                @include bp(xxl) {
+                    height: 42px;
+                }
+                @include bp(fhd) {
+                    height: 58px;
+                }
+            }
+
+            .spectre-btn {
+                @include bp(xxl) {
+                    height: 36px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
+                @include bp(fhd) {
+                    height: 52px;
+                }
             }
         }
     }

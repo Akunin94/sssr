@@ -41,7 +41,7 @@
     }
 
     &__description {
-        margin-bottom: 27px;
+        margin-bottom: 35px;
 
         @include bp(xxl) {
             margin-bottom: 0;
@@ -87,7 +87,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 54px;
+        margin: 0 10px 54px;
 
         @include bp(xxl) {
             margin: 15px 0 0 60px;

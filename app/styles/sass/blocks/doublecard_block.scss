@@ -196,6 +196,32 @@
 
         &-button {
             width: 100%;
+            height: 30px;
+            font-size: 13px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .spectre-input {
+            height: 34px;
+
+            @include bp(xxl) {
+                height: 42px;
+            }
+            @include bp(fhd) {
+                height: 56px;
+                border-radius: 14px;
+            }
+        }
+
+        .spectre-btn {
+            @include bp(xxl) {
+                height: 36px;
+            }
+            @include bp(fhd) {
+                height: 50px;
+                border-radius: 14px;
+            }
         }
     }
 }

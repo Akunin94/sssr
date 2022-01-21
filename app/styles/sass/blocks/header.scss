@@ -21,7 +21,7 @@
     }
 
     &__logo {
-        max-width: 60px;
+        max-width: 70px;
         font-size: 0;
 
         @include bp(md) {
@@ -130,9 +130,14 @@
                             font-weight: normal;
                         }
                         @include bp(fhd) {
-                            font-size: 19px;
-                            padding-top: 12px;
-                            padding-bottom: 12px;
+                            font-size: 23px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            border-radius: 20px;
+                            min-width: 190px;
+                            margin-bottom: 15px;
+                            padding-left: 15px;
+                            padding-right: 15px;
                         }
 
                         span {

@@ -1,7 +1,11 @@
 .spectre-map {
     margin: 0 -8px 64px;
-    padding-top: 34px;
+    padding-top: 13px;
 
+    @include bp(sm) {
+        margin-left: 0;
+        margin-right: 0;
+    }
     @include bp(xxl) {
         margin-bottom: 100px;
     }
@@ -128,12 +132,19 @@
 
     &__wrap {
         position: relative;
-        margin-left: -40px;
-        margin-right: -40px;
+        margin-left: -32px;
+        margin-right: -32px;
 
+        @include bp(sm) {
+            margin-left: -40px;
+            margin-right: -40px;
+        }
         @include bp(xxl) {
-            margin-left: 0;
+            margin-left: -30px;
             margin-right: 0;
+        }
+        @include bp(fhd) {
+            margin-left: -40px;
         }
 
         .pic1 {
@@ -152,6 +163,9 @@
                 height: 230px;    
                 top: -130px;
                 right: -110px;
+            }
+            @include bp(fhd) {
+                top: -80px;
             }
         }
 
@@ -172,6 +186,10 @@
                 left: -100px;
                 width: 426px;
             }
+            @include bp(fhd) {
+                bottom: -110px;
+                left: -150px;
+            }
         }
 
         .pic3 {
@@ -189,7 +207,7 @@
                 width: 206px;
                 height: 206px;
                 right: -120px;
-                bottom: -130px;
+                bottom: -123px;
             }
         }
     }

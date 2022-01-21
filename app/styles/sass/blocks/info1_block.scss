@@ -17,6 +17,10 @@
 
         @include bp(xxl) {
             margin-bottom: 71px;
+            max-width: 420px;
+        }
+        @include bp(fhd) {
+            max-width: 620px;
         }
     }
 
@@ -33,6 +37,10 @@
             display: flex;
             justify-content: space-between;
             border-radius: 60px;
+            padding: 38px 20px 42px 36px;
+        }
+        @include bp(fhd) {
+            padding: 50px 20px 50px 49px;
         }
     }
 
@@ -46,6 +54,11 @@
 
         @include bp(xxl) {
             text-align: left;
+            font-size: 25px;
+            line-height: 31px;
+            margin-bottom: 14px;
+        }
+        @include bp(fhd) {
             font-size: 34px;
             line-height: 41px;
             margin-bottom: 19px;
@@ -58,10 +71,6 @@
         }
     }
 
-    &__items {
-
-    }
-
     &__item {
         margin-bottom: 20px;
         display: flex;
@@ -71,9 +80,15 @@
         position: relative;
 
         @include bp(xxl) {
-            padding-left: 76px;
+            padding-left: 56px;
             text-align: left;
-            margin-bottom: 38px;
+            margin-bottom: 28px;
+        }
+        @include bp(fhd) {
+            padding-left: 76px;
+            margin-bottom: 37px;
+            min-height: 54px;
+            justify-content: center;
         }
 
         &:last-child {
@@ -96,17 +111,59 @@
             @include bp(xxl) {
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: calc(50% - 20px);
+                width: 40px;
+                height: 40px;
+                margin: 0;
+                font-size: 22px;
+                flex-direction: column;
+            }
+            @include bp(fhd) {
+                width: 54px;
+                height: 54px;
+                top: calc(50% - 27px);
+                font-size: 30px;
             }
     
             span {
                 display: none;
+                font-size: 7px;
+                line-height: 1;
+                margin-top: 0;
+
+                @include bp(xxl) {
+                    display: block;
+                }
+                @include bp(fhd) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        &:nth-child(3) &-icon {
+            @include bp(xxl) {
+                font-size: 14px;
+                line-height: 1;
+                padding-bottom: 5px;
+            }
+            @include bp(fhd) {
+                font-size: 18px;
             }
         }
 
         &-img {
             position: relative;
             top: -2px;
+
+            @include bp(xxl) {
+                max-width: 25px;
+                max-height: 25px;
+                top: -1px;
+            }
+            @include bp(fhd) {
+                max-width: 38px;
+                max-height: 38px;
+            }
         }
     
         &-title {
@@ -114,6 +171,16 @@
             line-height: 26px;
             margin-bottom: 2px;
             font-weight: 500;
+
+            @include bp(xxl) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 1px;
+            }
+            @include bp(fhd) {
+                font-size: 22px;
+                line-height: 26px;
+            }
         }
     
         &-text {
@@ -121,8 +188,12 @@
             line-height: 18px;
 
             @include bp(xxl) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            @include bp(fhd) {
                 font-size: 19px;
-                line-height: 26px;
+                line-height: 23px;
             }
         }
     }
@@ -140,8 +211,13 @@
 
         @include bp(xxl) {
             display: block;
-            flex: 0 0 380px;
-            max-width: 380px;
+            flex: 0 0 358px;
+            max-width: 358px;
+            margin: -38px -20px -42px 10px;
+        }
+        @include bp(fhd) {
+            flex-basis: 480px;
+            max-width: 480px;
             margin: -50px -20px -50px 10px;
         }
     }

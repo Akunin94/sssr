@@ -48,6 +48,10 @@
             bottom: -40px;
             background-image: url(../images/dist/header_white1.png);
         }
+        @include bp(xxl) {
+            height: 220px;
+            left: -208px;
+        }
     }
 
     &:after {
@@ -175,14 +179,15 @@
     }
 
     &__description {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 15px;
         color: #fff;
         background: rgba(0, 116, 201, 0.8);
         border-radius: 0 0 18px 18px;
-        padding: 3px 5px 5px 9px;
+        padding: 3px 3px 5px 9px;
         font-weight: 500;
         width: 273px;
+        letter-spacing: -0.2px;
 
         @include bp(md) {
             font-size: 18px;
