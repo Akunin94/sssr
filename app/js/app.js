@@ -169,9 +169,11 @@ $(function(){
 	$(document).on('click', '.spectre-video__button', function(){
 		let $this = $(this),
 			url = $this.data('url'),
-			$popup = $this.parent().find('.spectre-video__popup');
+			$popup = $this.parent().find('.spectre-video__popup'),
+			$popupBody = $this.parent().find('.spectre-video__body');
 		
-		$popup.html(url).addClass('active');
+		$popupBody.html(url);
+		$popup.addClass('active');
 	});
 	$(document).on('click', function (event) {
 		if ($(event.target).closest('.spectre-video__popup iframe').length || $(event.target).closest('.spectre-video__button').length) return;
@@ -186,7 +188,8 @@ $(function(){
 	});
 
 	function hideVideoPopup() {
-		$('.spectre-video__popup').html('').removeClass('active');
+		$('.spectre-video__body').html('');
+		$('.spectre-video__popup').removeClass('active');
 	}
 	// VIDEO POPUP END
 
