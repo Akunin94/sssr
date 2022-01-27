@@ -363,7 +363,7 @@
 			<form action="send.php" class="spectre-form-block__right-form">
 				<div class="spectre-form-block__right-form-title">Рассчитайте ипотеку</div>
 				<div class="spectre-form-block__right-form-field">
-					<input type="text" name="phone" placeholder="Телефон" required class="spectre-input">
+					<input type="text" name="phone" placeholder="+7 (___) ___-__-__" required class="spectre-input">
 				</div>
 				<div class="spectre-form-block__right-form-field">
 					<button class="spectre-form-block__right-form-button spectre-btn">ОТПРАВИТЬ</button>
@@ -404,7 +404,7 @@
             <form action="send.php" class="spectre-doublecard__form">
                 <div class="spectre-doublecard__form-title">Получить консультацию</div>
                 <div class="spectre-doublecard__form-field">
-                    <input type="text" name="phone" placeholder="Телефон" required class="spectre-input">
+                    <input type="text" name="phone" placeholder="+7 (___) ___-__-__" required class="spectre-input">
                 </div>
                 <div class="spectre-doublecard__form-field">
                     <button class="spectre-doublecard__form-button spectre-btn">ОТПРАВИТЬ</button>
@@ -455,7 +455,7 @@
 				<div class="spectre-calc__block-form-title">Ежемесячный платеж</div>
 				<div class="spectre-calc__block-form-price">от <span id="spectre-permonth">0</span> рублей</div>
 				<div class="spectre-calc__block-form-field">
-					<input type="text" name="phone" placeholder="Телефон" required class="spectre-input">
+					<input type="text" name="phone" placeholder="+7 (___) ___-__-__" required class="spectre-input">
 				</div>
 				<div class="spectre-calc__block-form-field">
 					<button type="submit" class="spectre-calc__block-form-button spectre-btn spectre-btn--big">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
@@ -831,7 +831,12 @@
 	<div class="spectre-video__button" data-url='<iframe width="1120" height="630" src="https://www.youtube.com/embed/8GXF6Fph0Y0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'></div>
 	<div class="spectre-video__description">Видео обзор о  жилом комплексе</div>
 	<div class="spectre-video__note">4 мин. 36 сек.</div>
-	<div class="spectre-video__popup"></div>
+	<div class="spectre-video__popup">
+		<div class="spectre-video__wrap">
+			<div class="spectre-video__close"></div>
+			<div class="spectre-video__body"></div>
+		</div>
+	</div>
 </div>
     </div>
 </main> 
@@ -847,7 +852,7 @@
                         <input
                             class="spectre-popup-form__form-input spectre-input"
                             type="text"
-                            placeholder="Телефон"
+                            placeholder="+7 (___) ___-__-__"
                             name="phone"
                             required
                         />
@@ -899,7 +904,7 @@
                         <input
                             class="spectre-popup-form1__form-input spectre-input"
                             type="text"
-                            placeholder="Телефон"
+                            placeholder="+7 (___) ___-__-__"
                             name="phone"
                             required
                         />
@@ -951,7 +956,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- <a href="#header" class="spectre-footer__linktop"></a> -->
+	<a href="#header" class="spectre-footer__linktop"></a>
 	<script src="js/app.min.js"></script>
 	<!-- Leadforms script start --> <script src="https://script.leadforms.ru/v1.js" type="application/javascript"></script> <script> document.addEventListener("DOMContentLoaded", function() { Leadforms.init({ id: '5893', autoOpen: 30 }); }); </script> <!-- Leadforms script end -->
 	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
