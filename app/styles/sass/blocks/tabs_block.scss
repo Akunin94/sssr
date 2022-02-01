@@ -133,11 +133,11 @@
                 margin-left: -40px;
             }
             @include bp(xxl) {
-                margin-left: -100px;
+                margin-left: -80px;
             }
             @include bp(fhd) {
                 padding-top: 80px;
-                margin-left: -150px;
+                margin-left: -100px;
             }
         }
 
@@ -187,15 +187,15 @@
                 margin-left: 40px;
             }
             @include bp(xxl) {
-                flex: 0 0 calc(33.333% - 100px);
-                max-width: calc(33.333% - 100px);
-                margin-left: 100px;
+                flex: 0 0 calc(33.333% - 80px);
+                max-width: calc(33.333% - 80px);
+                margin-left: 80px;
             }
             @include bp(fhd) {
-                flex: 0 0 calc(33.333% - 150px);
-                max-width: calc(33.333% - 150px);
+                flex: 0 0 calc(33.333% - 100px);
+                max-width: calc(33.333% - 100px);
                 padding: 46px 17px 22px;
-                margin-left: 150px;
+                margin-left: 100px;
             }
 
             &:hover {

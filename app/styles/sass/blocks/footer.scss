@@ -9,10 +9,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 41px 100px 40px 40px;
+        padding: 41px 50px 40px;
     }
     @include bp(fhd) {
-        padding: 55px 220px 54px 40px;
+        padding: 55px 80px 54px;
     }
 
     &__left {

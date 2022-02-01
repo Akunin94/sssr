@@ -10,12 +10,12 @@
         padding-bottom: 88px;
         background-position: right 0 top 0;
         background-size: auto calc(100% - 88px);
-        margin-right: -100px;
+        margin-right: -50px;
         padding-right: 120px;
     }
     @include bp(fhd) {
-        margin-right: -220px;
-        padding-right: 220px;
+        margin-right: -80px;
+        padding-right: 100px;
         padding-bottom: 136px;
         background-size: auto calc(100% - 136px);
     }

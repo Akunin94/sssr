@@ -27,6 +27,10 @@ $slider: '.spectre-slider';
                 right: auto;
                 left: 466px;
             }
+            @include bp(fhd) {
+                right: auto;
+                left: 630px;
+            }
         }
         #{$slider}__pager {
             @include bp(md1) {
@@ -284,7 +288,8 @@ $slider: '.spectre-slider';
             bottom: 60px;
         }
         @include bp(fhd) {
-            display: none !important;
+            right: 660px;
+            bottom: 80px;
         }
 
         &:before {

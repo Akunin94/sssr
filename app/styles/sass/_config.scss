@@ -367,12 +367,12 @@ img {
 		padding: 72px 80px 0;
 	}
 	@include bp(xxl) {
-		padding-left: 30px;
-		padding-right: 100px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 	@include bp(fhd) {
-		padding-left: 40px;
-		padding-right: 220px;
+		padding-left: 80px;
+		padding-right: 80px;
 	}
 }
 
